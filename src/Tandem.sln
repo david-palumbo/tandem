@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.30128.36
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tandem.Api", "Tandem.Api\Tandem.Api.csproj", "{F2758355-4094-4444-8412-7FE40A2BC01F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tandem.Application", "Tandem.Application\Tandem.Application.csproj", "{7A0C79EC-8C83-40BA-906E-3185ACF2408C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tandem.Domain", "Tandem.Domain\Tandem.Domain.csproj", "{188276C2-7F45-4353-9B42-7E2F6472A466}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tandem.Infrastructure.CosmosDB", "Tandem.Infrastructure.CosmosDB\Tandem.Infrastructure.CosmosDB.csproj", "{C027FC98-9022-4A0B-8BD8-A794B3476CF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{F2758355-4094-4444-8412-7FE40A2BC01F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2758355-4094-4444-8412-7FE40A2BC01F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2758355-4094-4444-8412-7FE40A2BC01F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A0C79EC-8C83-40BA-906E-3185ACF2408C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A0C79EC-8C83-40BA-906E-3185ACF2408C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A0C79EC-8C83-40BA-906E-3185ACF2408C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A0C79EC-8C83-40BA-906E-3185ACF2408C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{188276C2-7F45-4353-9B42-7E2F6472A466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{188276C2-7F45-4353-9B42-7E2F6472A466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{188276C2-7F45-4353-9B42-7E2F6472A466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{188276C2-7F45-4353-9B42-7E2F6472A466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C027FC98-9022-4A0B-8BD8-A794B3476CF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C027FC98-9022-4A0B-8BD8-A794B3476CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C027FC98-9022-4A0B-8BD8-A794B3476CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C027FC98-9022-4A0B-8BD8-A794B3476CF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

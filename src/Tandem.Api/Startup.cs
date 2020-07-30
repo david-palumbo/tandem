@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+
+using Tandem.Api.Middleware;
 using Tandem.Application.Users.Commands;
 using Tandem.Domain.Users;
 using Tandem.Infrastructure.CosmosDB.Users;
@@ -25,6 +27,7 @@ namespace Tandem.Api
             services.AddMediatR(
                 typeof(CreateUserCommand).Assembly);
             services.AddSingleton<IUserRepository, CosmosDBUserRepository>();
+            services.AddOpenApi();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -44,6 +47,8 @@ namespace Tandem.Api
             {
                 endpoints.MapControllers();
             });
+
+            app.UseOpenApi();
         }
     }
 }

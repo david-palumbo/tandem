@@ -49,7 +49,7 @@ namespace Tandem.Api.Users
             }
         }
 
-
+        [HttpGet]
         public async Task<IActionResult> Get(string email)
         {
             throw new NotImplementedException();

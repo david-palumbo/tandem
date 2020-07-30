@@ -6,28 +6,28 @@ using Tandem.Kernel;
 namespace Tandem.Domain.Users
 {
     /// <summary>
-    /// Represents a phone number.
+    /// Represents an email address.
     /// </summary>
-    public class PhoneNumber
+    public class EmailAddress
     {
         /// <summary>
-        /// Creates a new instance of the <see cref="PhoneNumber"/> class.
+        /// Creates a new instance of the <see cref="EmailAddress"/> class.
         /// </summary>
         /// <param name="value">
-        /// Required value for the phone number.
+        /// Required value for the email.
         /// </param>
-        public PhoneNumber(string value)
+        public EmailAddress(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
             {
                 throw new ArgumentNullException(nameof(value));
             }
 
-            if (!Regex.IsMatch(value, @"(1-)?\p{N}{3}-\p{N}{3}-\p{N}{4}\b"))
+            if (!Regex.IsMatch(value, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
             {
                 throw new ValidationException()
                 {
-                    UserFriendlyMessage = "Invalid phone number."
+                    UserFriendlyMessage = "Invalid email address."
                 };
             }
 
@@ -35,7 +35,7 @@ namespace Tandem.Domain.Users
         }
 
         /// <summary>
-        /// Gets the value of the phone number as a string.
+        /// Gets the value of the email address as a string.
         /// </summary>
         public string Value { get; }
     }

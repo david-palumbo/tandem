@@ -7,7 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="MediatR" Version="8.1.0" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
         <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Tandem.Application\Tandem.Application.csproj" />
+      <ProjectReference Include="..\Tandem.Infrastructure.CosmosDB\Tandem.Infrastructure.CosmosDB.csproj" />
     </ItemGroup>
 
 </Project>

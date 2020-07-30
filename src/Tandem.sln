@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tandem.Domain.Tests.Unit", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tandem.Kernel", "Tandem.Kernel\Tandem.Kernel.csproj", "{EF7A4461-3847-40A3-AB08-9F943A92FBEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tandem.Application.Tests.Unit", "Tandem.Application.Tests.Unit\Tandem.Application.Tests.Unit.csproj", "{592648AA-65EC-46D6-8988-F1F93DDAA749}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{EF7A4461-3847-40A3-AB08-9F943A92FBEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF7A4461-3847-40A3-AB08-9F943A92FBEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF7A4461-3847-40A3-AB08-9F943A92FBEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{592648AA-65EC-46D6-8988-F1F93DDAA749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{592648AA-65EC-46D6-8988-F1F93DDAA749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{592648AA-65EC-46D6-8988-F1F93DDAA749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{592648AA-65EC-46D6-8988-F1F93DDAA749}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

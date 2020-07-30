@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tandem.Domain\Tandem.Domain.csproj" />
+    <ProjectReference Include="..\Tandem.Kernel\Tandem.Kernel.csproj" />
   </ItemGroup>
 
 </Project>

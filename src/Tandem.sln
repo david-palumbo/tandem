@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30128.36
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tandem.Api", "Tandem.Api\Tandem.Api.csproj", "{F2758355-4094-4444-8412-7FE40A2BC01F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tandem.Api", "Tandem.Api\Tandem.Api.csproj", "{F2758355-4094-4444-8412-7FE40A2BC01F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tandem.Application", "Tandem.Application\Tandem.Application.csproj", "{7A0C79EC-8C83-40BA-906E-3185ACF2408C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tandem.Application", "Tandem.Application\Tandem.Application.csproj", "{7A0C79EC-8C83-40BA-906E-3185ACF2408C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tandem.Domain", "Tandem.Domain\Tandem.Domain.csproj", "{188276C2-7F45-4353-9B42-7E2F6472A466}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tandem.Domain", "Tandem.Domain\Tandem.Domain.csproj", "{188276C2-7F45-4353-9B42-7E2F6472A466}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tandem.Infrastructure.CosmosDB", "Tandem.Infrastructure.CosmosDB\Tandem.Infrastructure.CosmosDB.csproj", "{C027FC98-9022-4A0B-8BD8-A794B3476CF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tandem.Infrastructure.CosmosDB", "Tandem.Infrastructure.CosmosDB\Tandem.Infrastructure.CosmosDB.csproj", "{C027FC98-9022-4A0B-8BD8-A794B3476CF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tandem.Domain.Tests.Unit", "Tandem.Domain.Tests.Unit\Tandem.Domain.Tests.Unit.csproj", "{36D3BB76-9380-43FE-96C2-C24BF65881CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tandem.Domain.Tests.Unit", "Tandem.Domain.Tests.Unit\Tandem.Domain.Tests.Unit.csproj", "{36D3BB76-9380-43FE-96C2-C24BF65881CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tandem.Kernel", "Tandem.Kernel\Tandem.Kernel.csproj", "{EF7A4461-3847-40A3-AB08-9F943A92FBEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{36D3BB76-9380-43FE-96C2-C24BF65881CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36D3BB76-9380-43FE-96C2-C24BF65881CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36D3BB76-9380-43FE-96C2-C24BF65881CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF7A4461-3847-40A3-AB08-9F943A92FBEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7A4461-3847-40A3-AB08-9F943A92FBEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7A4461-3847-40A3-AB08-9F943A92FBEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7A4461-3847-40A3-AB08-9F943A92FBEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

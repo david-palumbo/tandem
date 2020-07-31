@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Tandem.Application\Tandem.Application.csproj" />
     <ProjectReference Include="..\Tandem.Infrastructure.CosmosDB\Tandem.Infrastructure.CosmosDB.csproj" />
   </ItemGroup>
 

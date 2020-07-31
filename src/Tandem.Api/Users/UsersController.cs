@@ -6,6 +6,8 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 using Tandem.Application.Users.Commands;
+using Tandem.Application.Users.Queries;
+using Tandem.Application.Users.Views;
 using Tandem.Kernel;
 
 namespace Tandem.Api.Users
@@ -48,11 +50,24 @@ namespace Tandem.Api.Users
                 return BadRequest(exception.UserFriendlyMessage);
             }
         }
-
+        
+        /// <summary>
+        /// Gets a user by the supplied <paramref name="email"/>.
+        /// </summary>
+        /// <param name="email">
+        /// Required email address used to find the user
+        /// </param>
         [HttpGet]
-        public async Task<IActionResult> Get(string email)
+        public async Task<ActionResult<UserDetailView>> Get(string email)
         {
-            throw new NotImplementedException();
+            UserByEmailQuery query = new UserByEmailQuery()
+            {
+                EmailAddress = email
+            };
+
+            UserDetailView result = await mediator.Send(query, CancellationToken.None);
+
+            return result ?? (ActionResult<UserDetailView>) NotFound();
         }
 
         private readonly IMediator mediator;

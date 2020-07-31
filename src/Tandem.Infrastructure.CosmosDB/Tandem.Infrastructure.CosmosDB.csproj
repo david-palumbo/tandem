@@ -5,10 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="8.1.0" />
     <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.11.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Tandem.Application\Tandem.Application.csproj" />
     <ProjectReference Include="..\Tandem.Domain\Tandem.Domain.csproj" />
   </ItemGroup>
 

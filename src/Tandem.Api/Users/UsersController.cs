@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 using Tandem.Application.Users.Commands;
@@ -38,6 +39,8 @@ namespace Tandem.Api.Users
         /// Required command containing the data for creating a new user.
         /// </param>
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Post(CreateUserCommand command)
         {
             try
@@ -58,6 +61,8 @@ namespace Tandem.Api.Users
         /// Required email address used to find the user
         /// </param>
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<UserDetailView>> Get(string email)
         {
             UserByEmailQuery query = new UserByEmailQuery()

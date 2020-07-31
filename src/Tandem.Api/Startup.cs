@@ -10,6 +10,7 @@ using Tandem.Api.Middleware;
 using Tandem.Application.Users.Commands;
 using Tandem.Domain.Users;
 using Tandem.Infrastructure.CosmosDB.Users;
+using Tandem.Infrastructure.CosmosDB.Users.Queries;
 
 namespace Tandem.Api
 {
@@ -26,14 +27,17 @@ namespace Tandem.Api
         {
             services.AddControllers();
             services.AddMediatR(
-                typeof(CreateUserCommand).Assembly);
+                typeof(CreateUserCommand).Assembly,
+                typeof(UserByEmailQueryHandler).Assembly);
+
             services.AddSingleton<IUserRepository, CosmosDBUserRepository>();
-            services.AddSingleton<CosmosClient>(
-                new CosmosClient(
+
+            services.AddCosmosDBAsync(
                     Configuration["Cosmos:Endpoint"],
-                    Configuration["Cosmos:Key"],
-                    new CosmosClientOptions() {ApplicationName = "Tandem"})
-            );
+                    Configuration["Cosmos:Key"])
+                .GetAwaiter()
+                .GetResult();
+
             services.AddOpenApi();
         }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 
 using MediatR;
+using Newtonsoft.Json;
 
 namespace Tandem.Application.Users.Commands
 {
@@ -9,6 +10,12 @@ namespace Tandem.Application.Users.Commands
     /// </summary>
     public class CreateUserCommand : IRequest<Guid>
     {
+        /// <summary>
+        /// Gets the unique identifier for this user
+        /// </summary>
+        [JsonProperty(PropertyName = "id")]
+        public Guid Id { get; }
+
         /// <summary>
 		/// Gets or sets the first name of the user.
 		/// </summary>

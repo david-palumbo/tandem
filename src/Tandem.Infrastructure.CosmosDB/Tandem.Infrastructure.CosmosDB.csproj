@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Tandem.Domain\Tandem.Domain.csproj" />
   </ItemGroup>
 
